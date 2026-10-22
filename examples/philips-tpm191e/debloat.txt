@@ -12,53 +12,158 @@
 # Everything is DISABLED, not uninstalled. Comment out any line you want to keep.
 #
 # Stock launcher: com.google.android.tvlauncher
-# The uk.co.freeview.* packages and org.droidtv.freeviewplayers are disabled from the factory on
-# this unit, so they are not listed (restore.sh would turn them ON).
+# Custom launcher: com.gathin.tvhome (used instead of stock launcher)
 #
-# Kept on purpose: org.droidtv.amazonalexa (Alexa power on/off), com.google.android.apps.mediashell
-# (Chromecast), org.droidtv.oad and com.easy.oad (firmware updates), org.droidtv.eum (see the
-# philips-50pus8517 list: xtv retries forever without it and the sources drawer dies).
+# Kept on purpose: org.droidtv.eum (required for sources drawer), org.droidtv.oad, com.easy.oad (firmware updates),
+# com.google.android.apps.mediashell (Chromecast), org.droidtv.teletext (Teletext), org.droidtv.nettvbrowser (HbbTV),
+# org.jellyfin.androidtv, it.rai.crossplatform.raiplay, it.la7.it, com.netflix.ninja (dock apps),
+# org.smarttube.stable, com.wireguard.android, dev.vodik7.tvquickactions, com.alphainventor.filemanager,
+# com.cybercat.adbappcontrol.tv
 
-# Batch 1: telemetry and retail demo
-org.droidtv.candeebug                     # "DAC" analytics uploader
-org.droidtv.ci                            # continuous integration / telemetry
-org.droidtv.gel                           # metrics collector sharing candeebug's process
-org.droidtv.icp                           # telemetry / analytics
-org.droidtv.usagelogger                   # boot stats, remote keypress counts, panel telemetry
-org.droidtv.tv.frameworklogger            # framework-level logging
-org.droidtv.dropboxprovider               # crash reporting / telemetry
-org.droidtv.tv.inactivityservice          # inactivity monitoring
-org.droidtv.demome                        # "Demo me" retail demo mode
-com.android.statementservice             # usage statistics / telemetry
-com.google.android.feedback               # Market Feedback Agent
-com.google.android.partnersetup           # partner referrer / attribution
-com.google.android.onetimeinitializer     # runs once at first setup, nothing afterwards
-com.google.android.gms                    # Google Mobile Services (telemetry)
-com.google.android.gsf                    # Google Services Framework (telemetry)
-com.google.android.syncadapters.calendar  # Google Calendar sync; no calendar app installed
-
-# Batch 2: Philips promotions
-org.droidtv.nettvrecommender              # "Top Picks" content promotion row
-org.droidtv.recommendation                # its headless backend; listed after the row on purpose
-org.droidtv.nettv.market                  # "Smart TV Collection" app storefront; the Play Store stays
-
-# Batch 3: apps this owner does not use
-com.google.android.katniss                # Assistant and voice search; the remote's mic button and "Hey Google" stop. Alexa is separate
+# =============================================================================
+# APP COMMERCIALI / STREAMING (rimuovibili senza problemi)
+# =============================================================================
 com.amazon.amazonvideo.livingroom         # Prime Video
-org.droidtv.amazonalexa                   # Alexa integration (optional: keep if using voice control)
-com.google.android.videos                 # Google TV / Play Movies
-com.google.android.music                  # Google Play Music, discontinued service
-com.google.android.youtube.tv              # YouTube
+com.apple.atve.androidtv.appletv          # Apple TV+
+com.google.android.youtube.tv             # YouTube
 com.google.android.youtube.tvmusic        # YouTube Music
-com.google.android.play.games
-com.google.android.marvin.talkback        # TalkBack screen reader; keep if anyone needs it
-org.droidtv.dlna                          # DLNA/UPnP server and renderer
-# com.phorus.playfi.tv                    # DTS Play-Fi: does NOT stay disabled. Back to enabled=1 after a reboot
-#                                         # (AudioOutService logs "PlayFi Enabled" at boot), so left enabled
-com.phorus.playfi.softap                  # DTS Play-Fi soft access point
+com.google.android.videos                 # Google TV / Play Movies
+com.google.android.play.games             # Google Play Games
 
-# Batch 4: after launcher/build-and-install.sh has moved Home and disabled com.google.android.tvlauncher.
-# The stock launcher holds a stable provider reference into this package, so disabling it first would
-# kill the live launcher. It is also the only handler for the notification side panel
-# (OPEN_NOTIFICATIONS_PANEL, TOGGLE_NOTIFICATION_HANDLER_PANEL) on this firmware: that panel goes too.
-com.google.android.tvrecommendations      # "Android TV Core Services": recommendation rows, notification panel
+# =============================================================================
+# SUITE FREEVIEW UK (inutile in Italia)
+# =============================================================================
+uk.co.freeview.mdsclient                   # Freeview metadata client
+uk.co.freeview.amc_catchup                 # AMC catch-up (UK)
+uk.co.freeview.onnow                       # Freeview on-now service
+uk.co.freeview.sony_kids_vod               # Sony Kids VOD (UK)
+uk.co.freeview.uktv                        # UKTV service
+org.droidtv.freeviewplayers                # Freeview players backend
+uk.co.freeview.fvpconfigauth               # Freeview config auth
+uk.co.freeview.explore                     # Freeview explore service
+uk.co.freeview.bbc_sounds                  # BBC Sounds
+uk.co.freeview.bbc                         # BBC app (UK)
+uk.co.freeview.ch5                         # Channel 5 (UK)
+uk.co.freeview.itv                         # ITV (UK)
+uk.co.freeview.stv                         # STV (UK)
+uk.co.freeview.amc_horror                  # AMC Horror (UK)
+uk.co.freeview.ch4_vod                     # Channel 4 VOD (UK)
+# uk.co.freeview.tifbridge                 # TIF bridge (keep if channel list behaves badly)
+
+# =============================================================================
+# BLOT PHILIPS / TP VISION (rimuovibili senza problemi)
+# =============================================================================
+org.droidtv.demome                         # Retail demo mode
+org.droidtv.recommendation                 # Philips content recommendation
+org.droidtv.candeebug                      # "DAC" analytics uploader
+org.droidtv.tv.frameworklogger             # Framework-level logging
+org.droidtv.usagelogger                    # Boot stats, remote keypress counts, panel telemetry
+org.droidtv.dropboxprovider                # Crash reporting / telemetry
+org.droidtv.nettv.market                   # "Smart TV Collection" app storefront
+org.droidtv.nettvrecommender               # "Top Picks" content promotion row
+org.droidtv.nettvapps                      # Philips TV apps service
+org.droidtv.nettvregistration              # Philips TV registration service
+org.droidtv.amazonalexa                    # Alexa integration
+org.droidtv.sticker                        # Sticker service
+org.droidtv.ambiair                        # Ambilight + Hue (keep if using Hue lights)
+org.droidtv.alhuewizard                    # Hue setup wizard
+org.droidtv.networkwizard                  # Network setup wizard
+org.droidtv.devicesetup                    # Device setup (remove only after initial setup)
+
+# =============================================================================
+# BLOT GOOGLE / ANDROID (rimuovibili senza problemi)
+# =============================================================================
+com.google.android.backdrop                # Google TV screensaver/ambient
+com.google.android.feedback                # Market Feedback Agent
+com.google.android.katniss                 # Assistant and voice search
+com.google.android.tvrecommendations       # Android TV Core Services: recommendation rows
+com.google.android.syncadapters.calendar   # Google Calendar sync
+com.android.providers.calendar             # Calendar provider (no calendar app installed)
+com.android.providers.contacts             # Contacts provider
+com.google.android.tungsten.setupwraith    # Google setup service
+com.google.android.onetimeinitializer      # Runs once at first setup
+com.google.android.partnersetup            # Partner referrer / attribution
+com.android.dynsystem                      # Dynamic system
+com.android.cts.priv.ctsshim               # CTS shim (testing)
+com.android.cts.ctsshim                    # CTS shim (testing)
+com.android.printspooler                   # Print spooler
+com.android.htmlviewer                     # HTML viewer
+com.android.dreams.basic                   # Basic daydream screensaver
+com.android.soundpicker                    # Sound picker
+com.android.managedprovisioning            # Managed provisioning
+com.android.statementservice               # Usage statistics / telemetry
+com.android.settings.intelligence          # Settings intelligence
+com.android.tv.overlay.settingsprovider    # Settings provider overlay
+
+# =============================================================================
+# VEWD BROWSER
+# =============================================================================
+com.vewd.core.browserui                    # Vewd browser UI
+
+# =============================================================================
+# GOOGLE TV LAUNCHER (rimuovibili SOLO dopo aver verificato che com.gathin.tvhome funziona)
+# =============================================================================
+# com.google.android.tvlauncher            # Stock launcher (DISABLE AFTER verifying com.gathin.tvhome works)
+# org.droidtv.leanbackcustomizer           # Leanback customizer
+# org.droidtv.gel                          # Google metrics collector
+
+# =============================================================================
+# APP OPTIONALI - DECIDI TU SE RIMUOVERE
+# =============================================================================
+org.droidtv.contentexplorer              # USB file browser (keep if using USB media)
+org.droidtv.teletext                     # Teletext (keep if needed)
+org.droidtv.dlna                         # DLNA server/client
+com.google.android.marvin.talkback       # TalkBack accessibility
+com.google.android.tts                   # Text-to-speech
+# com.google.android.ext.shared            # Google shared services
+
+# =============================================================================
+# PACKAGE CRITICI - NON DISABILITARE (rompono la TV)
+# =============================================================================
+# android
+# com.android.systemui
+# com.android.shell
+# com.android.tv.settings
+# org.droidtv.settings
+# org.droidtv.xtv
+# org.droidtv.eum
+# org.droidtv.tvsystemui
+# org.droidtv.philipstvdrawer
+# org.droidtv.tvpowermanagerservice
+# org.droidtv.homeintentresolver
+# org.droidtv.menudataapp
+# org.droidtv.ui.strings
+# org.droidtv.ui.tvwidget2k15
+# org.droidtv.GlobalKey
+# org.droidtv.tv.tptvservice
+# org.droidtv.exoplayerservice
+# org.droidtv.playtv
+# org.droidtv.epgdata
+# org.droidtv.ci
+# org.droidtv.euinstallertc
+# org.droidtv.euinstallersat
+# org.droidtv.tv.packageinfo
+# org.droidtv.tv.permissions
+# org.droidtv.csm
+# org.droidtv.sam
+# org.droidtv.lkb
+# org.droidtv.icp
+# org.droidtv.dukservice
+# org.droidtv.fastip
+# org.droidtv.tv.inactivityservice
+# org.droidtv.usbbreakin
+# org.droidtv.sunrise
+# org.droidtv.ambihuecommon
+# org.droidtv.common.accesshiddenapi
+# com.mediatek.tvinput
+# com.mediatek.tunerservice
+# com.mediatek.tv.agent
+# com.mediatek.tvinputservice.arbitratorservice
+# com.mediatek.backgrounddetection
+# com.mediatek.network
+# com.google.android.gms
+# com.google.android.gsf
+# com.google.android.webview
+# com.google.android.permissioncontroller
+# com.google.android.modulemetadata
+# com.google.android.tv.remote.service
