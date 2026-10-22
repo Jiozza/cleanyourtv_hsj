@@ -1,6 +1,6 @@
 {
-  "dock_apps": ["com.netflix.ninja", "org.jellyfin.androidtv", "it.rai.crossplatform.raiplay", "it.la7.it"],
-  "columns": 4,
+  "dock_apps": ["com.netflix.ninja", "com.spotify.tv.android", "org.jellyfin.androidtv", "it.rainet.androidtv", "it.la7.it"],
+  "columns": 5,
   "rows_below_dock": 1,
   "background_color": "#000000",
   "wallpaper": false
