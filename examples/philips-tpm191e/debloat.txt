@@ -115,7 +115,7 @@ org.droidtv.teletext                     # Teletext (keep if needed)
 org.droidtv.dlna                         # DLNA server/client
 com.google.android.marvin.talkback       # TalkBack accessibility
 com.google.android.tts                   # Text-to-speech
-com.google.android.ext.shared            # Google shared services
+# com.google.android.ext.shared            # Google shared services
 
 # =============================================================================
 # PACKAGE CRITICI - NON DISABILITARE (rompono la TV)
