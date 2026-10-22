@@ -23,11 +23,9 @@
 # =============================================================================
 # APP COMMERCIALI / STREAMING (rimuovibili senza problemi)
 # =============================================================================
-com.spotify.tv.android                    # Spotify
 com.amazon.amazonvideo.livingroom         # Prime Video
 com.apple.atve.androidtv.appletv          # Apple TV+
-com.netflix.ninja                         # Netflix (keep if using custom_italy theme)
-com.google.android.youtube.tv              # YouTube
+com.google.android.youtube.tv             # YouTube
 com.google.android.youtube.tvmusic        # YouTube Music
 com.google.android.videos                 # Google TV / Play Movies
 com.google.android.play.games             # Google Play Games
@@ -36,7 +34,7 @@ com.google.android.play.games             # Google Play Games
 # SUITE FREEVIEW UK (inutile in Italia)
 # =============================================================================
 uk.co.freeview.mdsclient                   # Freeview metadata client
-uk.co.freeview.amc_catchup                # AMC catch-up (UK)
+uk.co.freeview.amc_catchup                 # AMC catch-up (UK)
 uk.co.freeview.onnow                       # Freeview on-now service
 uk.co.freeview.sony_kids_vod               # Sony Kids VOD (UK)
 uk.co.freeview.uktv                        # UKTV service
@@ -48,7 +46,7 @@ uk.co.freeview.bbc                         # BBC app (UK)
 uk.co.freeview.ch5                         # Channel 5 (UK)
 uk.co.freeview.itv                         # ITV (UK)
 uk.co.freeview.stv                         # STV (UK)
-uk.co.freeview.amc_horror                 # AMC Horror (UK)
+uk.co.freeview.amc_horror                  # AMC Horror (UK)
 uk.co.freeview.ch4_vod                     # Channel 4 VOD (UK)
 # uk.co.freeview.tifbridge                 # TIF bridge (keep if channel list behaves badly)
 
@@ -64,7 +62,7 @@ org.droidtv.dropboxprovider                # Crash reporting / telemetry
 org.droidtv.nettv.market                   # "Smart TV Collection" app storefront
 org.droidtv.nettvrecommender               # "Top Picks" content promotion row
 org.droidtv.nettvapps                      # Philips TV apps service
-org.droidtv.nettvregistration               # Philips TV registration service
+org.droidtv.nettvregistration              # Philips TV registration service
 org.droidtv.amazonalexa                    # Alexa integration
 org.droidtv.sticker                        # Sticker service
 org.droidtv.ambiair                        # Ambilight + Hue (keep if using Hue lights)
@@ -79,49 +77,45 @@ com.google.android.backdrop                # Google TV screensaver/ambient
 com.google.android.feedback                # Market Feedback Agent
 com.google.android.katniss                 # Assistant and voice search
 com.google.android.tvrecommendations       # Android TV Core Services: recommendation rows
-com.google.android.syncadapters.calendar  # Google Calendar sync
-com.android.providers.calendar            # Calendar provider (no calendar app installed)
-com.android.providers.contacts            # Contacts provider
+com.google.android.syncadapters.calendar   # Google Calendar sync
+com.android.providers.calendar             # Calendar provider (no calendar app installed)
+com.android.providers.contacts             # Contacts provider
 com.google.android.tungsten.setupwraith    # Google setup service
 com.google.android.onetimeinitializer      # Runs once at first setup
 com.google.android.partnersetup            # Partner referrer / attribution
 com.android.dynsystem                      # Dynamic system
 com.android.cts.priv.ctsshim               # CTS shim (testing)
-com.android.cts.ctsshim                     # CTS shim (testing)
+com.android.cts.ctsshim                    # CTS shim (testing)
 com.android.printspooler                   # Print spooler
-com.android.htmlviewer                    # HTML viewer
+com.android.htmlviewer                     # HTML viewer
 com.android.dreams.basic                   # Basic daydream screensaver
 com.android.soundpicker                    # Sound picker
 com.android.managedprovisioning            # Managed provisioning
-com.android.statementservice              # Usage statistics / telemetry
+com.android.statementservice               # Usage statistics / telemetry
 com.android.settings.intelligence          # Settings intelligence
-com.android.tv.overlay.settingsprovider   # Settings provider overlay
+com.android.tv.overlay.settingsprovider    # Settings provider overlay
 
 # =============================================================================
 # VEWD BROWSER
 # =============================================================================
-com.vewd.core.browserui                   # Vewd browser UI
+com.vewd.core.browserui                    # Vewd browser UI
 
 # =============================================================================
 # GOOGLE TV LAUNCHER (rimuovibili SOLO dopo aver verificato che com.gathin.tvhome funziona)
 # =============================================================================
 # com.google.android.tvlauncher            # Stock launcher (DISABLE AFTER verifying com.gathin.tvhome works)
 # org.droidtv.leanbackcustomizer           # Leanback customizer
-# org.droidtv.gel                           # Google metrics collector
+# org.droidtv.gel                          # Google metrics collector
 
 # =============================================================================
 # APP OPTIONALI - DECIDI TU SE RIMUOVERE
 # =============================================================================
-# org.droidtv.nettvbrowser                 # HbbTV engine (keep if using DTT interactivity)
-# it.la7.it                                # LA7 app (keep if using in custom_italy theme)
-# it.rainet.androidtv                      # Rai catch-up (keep if needed)
-# org.droidtv.contentexplorer              # USB file browser (keep if using USB media)
-# org.droidtv.teletext                     # Teletext (keep if needed)
-# com.google.android.apps.mediashell      # Chromecast (keep if using casting)
-# org.droidtv.dlna                         # DLNA server/client
-# com.google.android.marvin.talkback       # TalkBack accessibility
-# com.google.android.tts                   # Text-to-speech
-# com.google.android.ext.shared            # Google shared services
+org.droidtv.contentexplorer              # USB file browser (keep if using USB media)
+org.droidtv.teletext                     # Teletext (keep if needed)
+org.droidtv.dlna                         # DLNA server/client
+com.google.android.marvin.talkback       # TalkBack accessibility
+com.google.android.tts                   # Text-to-speech
+com.google.android.ext.shared            # Google shared services
 
 # =============================================================================
 # PACKAGE CRITICI - NON DISABILITARE (rompono la TV)
